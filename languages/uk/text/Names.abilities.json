@@ -1,0 +1,704 @@
+[
+ {
+  "id": 0,
+  "where": "Keyword",
+  "cells": [
+   "0:1"
+  ],
+  "text": "",
+  "key": "709a23220f2c"
+ },
+ {
+  "id": 1,
+  "where": "3_headed_attack",
+  "cells": [
+   "1:1"
+  ],
+  "text": "Атака трьома головами",
+  "key": "bdd4a6166878"
+ },
+ {
+  "id": 2,
+  "where": "aging",
+  "cells": [
+   "2:1"
+  ],
+  "text": "Старіння",
+  "key": "6ea92a1f626e"
+ },
+ {
+  "id": 3,
+  "where": "area_effect",
+  "cells": [
+   "3:1"
+  ],
+  "text": "Атака по площі",
+  "key": "28c3b434ab45"
+ },
+ {
+  "id": 4,
+  "where": "berserk",
+  "cells": [
+   "4:1"
+  ],
+  "text": "Шал",
+  "key": "9ecca445cad6"
+ },
+ {
+  "id": 5,
+  "where": "binding",
+  "cells": [
+   "5:1"
+  ],
+  "text": "Сковування",
+  "key": "7f0043e684cc"
+ },
+ {
+  "id": 6,
+  "where": "blinding",
+  "cells": [
+   "6:1"
+  ],
+  "text": "Осліплення",
+  "key": "bc88c11a98a4"
+ },
+ {
+  "id": 7,
+  "where": "block",
+  "cells": [
+   "7:1"
+  ],
+  "text": "Блок",
+  "key": "82dd2cdf36f9"
+ },
+ {
+  "id": 8,
+  "where": "bloodlust",
+  "cells": [
+   "8:1"
+  ],
+  "text": "Жага крові",
+  "key": "3493ed064944"
+ },
+ {
+  "id": 9,
+  "where": "sea_bonus",
+  "cells": [
+   "9:1"
+  ],
+  "text": "Перевага на морі",
+  "key": "81b6c3f17b67"
+ },
+ {
+  "id": 10,
+  "where": "breath_attack",
+  "cells": [
+   "10:1"
+  ],
+  "text": "Подих",
+  "key": "d47cebf57950"
+ },
+ {
+  "id": 11,
+  "where": "cave_dweller",
+  "cells": [
+   "11:1"
+  ],
+  "text": "Печерний мешканець",
+  "key": "f409dcce68a8"
+ },
+ {
+  "id": 12,
+  "where": "chaos_protection",
+  "cells": [
+   "12:1"
+  ],
+  "text": "Оберіг від Хаосу",
+  "key": "7cc9f5e1340a"
+ },
+ {
+  "id": 13,
+  "where": "charging",
+  "cells": [
+   "13:1"
+  ],
+  "text": "Таран",
+  "key": "d4e1aee46cda"
+ },
+ {
+  "id": 14,
+  "where": "cold_attack",
+  "cells": [
+   "14:1"
+  ],
+  "text": "Атака холодом",
+  "key": "2cac618f4b5f"
+ },
+ {
+  "id": 15,
+  "where": "cold_resistance",
+  "cells": [
+   "15:1"
+  ],
+  "text": "Опір холоду",
+  "key": "bdf1a002d0a3"
+ },
+ {
+  "id": 16,
+  "where": "curse",
+  "cells": [
+   "16:1"
+  ],
+  "text": "Прокляття",
+  "key": "0b3d98d5a8a2"
+ },
+ {
+  "id": 17,
+  "where": "death_protection",
+  "cells": [
+   "17:1"
+  ],
+  "text": "Оберіг від Смерті",
+  "key": "9988fbebd12f"
+ },
+ {
+  "id": 18,
+  "where": "devouring",
+  "cells": [
+   "18:1"
+  ],
+  "text": "Пожирання",
+  "key": "a07567e4287d"
+ },
+ {
+  "id": 19,
+  "where": "elemental",
+  "cells": [
+   "19:1"
+  ],
+  "text": "Елементаль",
+  "key": "5871bb361901"
+ },
+ {
+  "id": 20,
+  "where": "panic",
+  "cells": [
+   "20:1"
+  ],
+  "text": "Страх",
+  "key": "689e027c2657"
+ },
+ {
+  "id": 21,
+  "where": "fire_attack",
+  "cells": [
+   "21:1"
+  ],
+  "text": "Атака вогнем",
+  "key": "d1ac8ba65edc"
+ },
+ {
+  "id": 22,
+  "where": "fire_resistance",
+  "cells": [
+   "22:1"
+  ],
+  "text": "Опір вогню",
+  "key": "a31e37313d09"
+ },
+ {
+  "id": 23,
+  "where": "fire_shield",
+  "cells": [
+   "23:1"
+  ],
+  "text": "Вогняний щит",
+  "key": "be772084ea92"
+ },
+ {
+  "id": 24,
+  "where": "first_strike",
+  "cells": [
+   "24:1"
+  ],
+  "text": "Перший удар",
+  "key": "f76c9d84a2b3"
+ },
+ {
+  "id": 25,
+  "where": "flying",
+  "cells": [
+   "25:1"
+  ],
+  "text": "Політ",
+  "key": "03f0feececb0"
+ },
+ {
+  "id": 26,
+  "where": "fortune",
+  "cells": [
+   "26:1"
+  ],
+  "text": "Фортуна",
+  "key": "7517bda593c3"
+ },
+ {
+  "id": 27,
+  "where": "freeze",
+  "cells": [
+   "27:1"
+  ],
+  "text": "Заморожувальна атака",
+  "key": "e15f0b12e155"
+ },
+ {
+  "id": 28,
+  "where": "giantslayer",
+  "cells": [
+   "28:1"
+  ],
+  "text": "Убивця велетнів",
+  "key": "ee38f92de57e"
+ },
+ {
+  "id": 29,
+  "where": "hypnotize",
+  "cells": [
+   "29:1"
+  ],
+  "text": "Гіпноз",
+  "key": "baadbb853b78"
+ },
+ {
+  "id": 30,
+  "where": "magic_immunity",
+  "cells": [
+   "30:1"
+  ],
+  "text": "Несприйнятливість до магії",
+  "key": "492bf61cdf72"
+ },
+ {
+  "id": 31,
+  "where": "blind",
+  "cells": [
+   "31:1"
+  ],
+  "text": "Несприйнятливість до погляду",
+  "key": "c68389aa7f2b"
+ },
+ {
+  "id": 32,
+  "where": "insubstantial",
+  "cells": [
+   "32:1"
+  ],
+  "text": "Безтілесність",
+  "key": "4a2396068019"
+ },
+ {
+  "id": 33,
+  "where": "vampire",
+  "cells": [
+   "33:1"
+  ],
+  "text": "Висмоктування життя",
+  "key": "656e79ba5f0f"
+ },
+ {
+  "id": 34,
+  "where": "life_protection",
+  "cells": [
+   "34:1"
+  ],
+  "text": "Оберіг від Життя",
+  "key": "503887e4b5ed"
+ },
+ {
+  "id": 35,
+  "where": "lightning",
+  "cells": [
+   "35:1"
+  ],
+  "text": "Атака блискавкою",
+  "key": "5a02b14b2538"
+ },
+ {
+  "id": 36,
+  "where": "long_range",
+  "cells": [
+   "36:1"
+  ],
+  "text": "Дальній постріл",
+  "key": "3b52a2700ee2"
+ },
+ {
+  "id": 37,
+  "where": "long_weapon",
+  "cells": [
+   "37:1"
+  ],
+  "text": "Довга зброя",
+  "key": "96020eabdcc8"
+ },
+ {
+  "id": 38,
+  "where": "magic_mirror",
+  "cells": [
+   "38:1"
+  ],
+  "text": "Магічне дзеркало",
+  "key": "069ab6ce9f4e"
+ },
+ {
+  "id": 39,
+  "where": "magic_resistance",
+  "cells": [
+   "39:1"
+  ],
+  "text": "Опір магії",
+  "key": "2d2d6fb66d35"
+ },
+ {
+  "id": 40,
+  "where": "mana_leech",
+  "cells": [
+   "40:1"
+  ],
+  "text": "Висмоктування мани",
+  "key": "50e92e893020"
+ },
+ {
+  "id": 41,
+  "where": "mechanical",
+  "cells": [
+   "41:1"
+  ],
+  "text": "Механізм",
+  "key": "0f2dcda5fbef"
+ },
+ {
+  "id": 42,
+  "where": "mirth",
+  "cells": [
+   "42:1"
+  ],
+  "text": "Веселощі",
+  "key": "653a17596d50"
+ },
+ {
+  "id": 43,
+  "where": "hydra_strike",
+  "cells": [
+   "43:1"
+  ],
+  "text": "Множинна атака",
+  "key": "4ada97dc21d8"
+ },
+ {
+  "id": 44,
+  "where": "first_strike_immunity",
+  "cells": [
+   "44:1"
+  ],
+  "text": "Протидія першому удару",
+  "key": "01e413e4de0d"
+ },
+ {
+  "id": 45,
+  "where": "siege_machine",
+  "cells": [
+   "45:1"
+  ],
+  "text": "Без штрафу за перешкоди",
+  "key": "2a5693620ae7"
+ },
+ {
+  "id": 46,
+  "where": "no_retaliation",
+  "cells": [
+   "46:1"
+  ],
+  "text": "Без відповіді",
+  "key": "8d9fab613f4e"
+ },
+ {
+  "id": 47,
+  "where": "normal_melee",
+  "cells": [
+   "47:1"
+  ],
+  "text": "Звичайний ближній бій",
+  "key": "dacbf4de06ee"
+ },
+ {
+  "id": 48,
+  "where": "poison",
+  "cells": [
+   "48:1"
+  ],
+  "text": "Отрута",
+  "key": "6de0b0c65644"
+ },
+ {
+  "id": 49,
+  "where": "random_curse",
+  "cells": [
+   "49:1"
+  ],
+  "text": "Випадкові прокляття",
+  "key": "0730b450dab6"
+ },
+ {
+  "id": 50,
+  "where": "ranged",
+  "cells": [
+   "50:1"
+  ],
+  "text": "Стрільба",
+  "key": "a6a535b865db"
+ },
+ {
+  "id": 51,
+  "where": "ranged_first_strike",
+  "cells": [
+   "51:1"
+  ],
+  "text": "Перший постріл",
+  "key": "813852b25f03"
+ },
+ {
+  "id": 52,
+  "where": "rebirth",
+  "cells": [
+   "52:1"
+  ],
+  "text": "Відродження",
+  "key": "89992da5b314"
+ },
+ {
+  "id": 53,
+  "where": "regeneration",
+  "cells": [
+   "53:1"
+  ],
+  "text": "Регенерація",
+  "key": "506eb98f49ae"
+ },
+ {
+  "id": 54,
+  "where": "resurrection",
+  "cells": [
+   "54:1"
+  ],
+  "text": "Воскресіння",
+  "key": "a19b05f05155"
+ },
+ {
+  "id": 55,
+  "where": "shoots_twice",
+  "cells": [
+   "55:1"
+  ],
+  "text": "Подвійний постріл",
+  "key": "e13b92cebb3d"
+ },
+ {
+  "id": 56,
+  "where": "short_range",
+  "cells": [
+   "56:1"
+  ],
+  "text": "Короткий постріл",
+  "key": "5d84b9a36c41"
+ },
+ {
+  "id": 57,
+  "where": "skeletal",
+  "cells": [
+   "57:1"
+  ],
+  "text": "Скелет",
+  "key": "30a4a0636525"
+ },
+ {
+  "id": 58,
+  "where": "spellcaster",
+  "cells": [
+   "58:1"
+  ],
+  "text": "Чарівник",
+  "key": "33fd080b531b"
+ },
+ {
+  "id": 59,
+  "where": "stealth",
+  "cells": [
+   "59:1"
+  ],
+  "text": "Скритність",
+  "key": "723e8dc1b3b0"
+ },
+ {
+  "id": 60,
+  "where": "stone_gaze",
+  "cells": [
+   "60:1"
+  ],
+  "text": "Кам'яний погляд",
+  "key": "0eef8d9f4323"
+ },
+ {
+  "id": 61,
+  "where": "stone_skin",
+  "cells": [
+   "61:1"
+  ],
+  "text": "Кам'яна шкіра",
+  "key": "ac218b516cc6"
+ },
+ {
+  "id": 62,
+  "where": "strength",
+  "cells": [
+   "62:1"
+  ],
+  "text": "Сила",
+  "key": "24d3e4fdd9a8"
+ },
+ {
+  "id": 63,
+  "where": "strike_and_return",
+  "cells": [
+   "63:1"
+  ],
+  "text": "Удар і повернення",
+  "key": "44073edf1417"
+ },
+ {
+  "id": 64,
+  "where": "stunning",
+  "cells": [
+   "64:1"
+  ],
+  "text": "Оглушення",
+  "key": "d97664aa1386"
+ },
+ {
+  "id": 65,
+  "where": "summons_demons",
+  "cells": [
+   "65:1"
+  ],
+  "text": "Виклик демонів",
+  "key": "f1fdbc772095"
+ },
+ {
+  "id": 66,
+  "where": "taxpayer",
+  "cells": [
+   "66:1"
+  ],
+  "text": "Платник податків",
+  "key": "bdef770b508f"
+ },
+ {
+  "id": 67,
+  "where": "teleport",
+  "cells": [
+   "67:1"
+  ],
+  "text": "Телепортація",
+  "key": "f9f57d40683e"
+ },
+ {
+  "id": 68,
+  "where": "terror",
+  "cells": [
+   "68:1"
+  ],
+  "text": "Жах",
+  "key": "799316349768"
+ },
+ {
+  "id": 69,
+  "where": "toughness",
+  "cells": [
+   "69:1"
+  ],
+  "text": "Витривалість",
+  "key": "95e6dab2c81e"
+ },
+ {
+  "id": 70,
+  "where": "strikes_twice",
+  "cells": [
+   "70:1"
+  ],
+  "text": "Дві атаки",
+  "key": "465a0d57c647"
+ },
+ {
+  "id": 71,
+  "where": "undead",
+  "cells": [
+   "71:1"
+  ],
+  "text": "Нежить",
+  "key": "a53cc9c68e5e"
+ },
+ {
+  "id": 72,
+  "where": "unlimited_retaliation",
+  "cells": [
+   "72:1"
+  ],
+  "text": "Безліч відповідей",
+  "key": "f0d48fe83caa"
+ },
+ {
+  "id": 73,
+  "where": "unlimited_shots",
+  "cells": [
+   "73:1"
+  ],
+  "text": "Безліч пострілів",
+  "key": "02db576810d5"
+ },
+ {
+  "id": 74,
+  "where": "weakness",
+  "cells": [
+   "74:1"
+  ],
+  "text": "Слабкість",
+  "key": "429a85e88299"
+ },
+ {
+  "id": 75,
+  "where": "large_area_effect",
+  "cells": [
+   "79:1"
+  ],
+  "text": "Грецький вогонь",
+  "key": "0c3e5cc17569"
+ },
+ {
+  "id": 76,
+  "where": "arc_breath_attack",
+  "cells": [
+   "80:1"
+  ],
+  "text": "Дуговий подих",
+  "key": "9956da4b2b12"
+ },
+ {
+  "id": 77,
+  "where": "no_ranged_penalties",
+  "cells": [
+   "81:1"
+  ],
+  "text": "Облогова зброя",
+  "key": "34cfdbe65e56"
+ }
+]
