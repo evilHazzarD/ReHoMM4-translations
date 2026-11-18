@@ -36,7 +36,8 @@ are not committed either.
 
 ## Releases
 
-`tools/release.sh <version> <game dir>` makes the GitHub release `v<version>`. A pack is made from
+`tools/release.sh <version> <game dir> [<code>...]` makes the GitHub release `v<version>`, for every
+language or only those named (the others keep their packs from earlier releases). A pack is made from
 the game, so a release is built on a maintainer's Mac, from their own GOG copy. The release
 carries:
 
@@ -44,7 +45,6 @@ carries:
 |---|---|
 | `languages.json` | the list the apps read: each language's name, restart note, pack address, size and SHA-256 |
 | `<code>.h4p` | the language pack: a delta of the game's archives that the app applies in place |
-| `<code>.button.argb`, `<code>.note.argb` | the language button and note pictures for the Linux and Switch apps |
 | `ReHoMM4-translations-v<version>.zip` | the source: `languages/` and `tools/`, no game data |
 
 Every push is checked by `tools/check.py` (the `check` workflow). It validates `language.json`,

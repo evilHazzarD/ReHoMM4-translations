@@ -131,16 +131,19 @@ a recording keep the English voice.
 ## 8. Release
 
 Players get translations only from a release of this repository. A maintainer makes one when the
-work is ready, for all languages at once:
+work is ready, for all languages or only the ones that changed:
 
 ```sh
 gh auth login                                        # once
-bash tools/release.sh 2026.12 /path/to/game          # the GitHub release v2026.12
+bash tools/release.sh 2026.12 /path/to/game          # every language: the GitHub release v2026.12
+bash tools/release.sh 2026.12.1 /path/to/game pl     # only Polish
 ```
 
-This builds every language's pack from `languages/*/text`, plus the button pictures for Linux
-and the Switch, and uploads them with `languages.json` and a zip of the source. Commit and push
-first; the script refuses a tree with uncommitted changes. The apps see the release at their next
+This builds the packs from `languages/<code>/text` and uploads them with `languages.json` and a zip
+of the source. When only some languages are named, the others keep their entries from the previous
+release's `languages.json`, with their packs where they were uploaded then: players of those
+languages download nothing. So never delete an old release while its pack is still in use (the
+latest `languages.json` shows each pack's address). Commit and push first; the script refuses a tree with uncommitted changes. The apps see the release at their next
 start. A player who has picked a language gets its new pack (checked by size and SHA-256) the
 time after that. Bump `version` in `language.json` when your language changes.
 
@@ -161,5 +164,4 @@ app with `H4_TRANSLATIONS_URL=http://<your Mac>:8000/languages.json`.
 | `check.py [<code>...]` | validates without the game (CI) |
 | `apply.py <code> <game dir>` | patches a game's archives in place (use a copy) |
 | `pack.py <code> <game dir>` | `build/<code>/<code>.h4p`, the pack the app applies |
-| `release.sh <version> <game dir> [owner/name]` | the GitHub release the apps read (all languages) |
-| `render_ui.swift <out dir> <languages.tsv>` | the language button pictures for Linux and the Switch |
+| `release.sh <version> <game dir> [<code>...]` | the GitHub release the apps read (all languages, or only those named) |
