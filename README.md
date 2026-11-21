@@ -15,6 +15,17 @@ release**. Commits change nothing for them. At every start the apps read the lat
 
 The Ukrainian translation was taken from [HoMM4Deadware](https://github.com/LeoDeadware/HoMM4Deadware).
 
+## The Windows game (without ReHoMM4)
+
+The original Windows game from GOG (Heroes IV Complete 3.0, English) can be played in a translation
+too: download `<code>-windows.zip` (for Ukrainian, `uk-windows.zip`) from the
+[latest release](https://github.com/evilHazzarD/ReHoMM4-translations/releases/latest) and unzip it
+into the game folder (the one with `heroes4.exe`), replacing the files. Nothing of the game is
+changed: the translation is a separate archive, `Data/new.h4r`, which the game reads last, and the
+translated maps go into `maps/`. Deleting `Data/new.h4r` brings the English text back. The zip's
+`WINDOWS.txt` tells the player the same, step by step (`tools/windows.py` makes the zip;
+`release.sh` adds it for each language that has `languages/<code>/WINDOWS.txt`).
+
 Want to add your language? [TRANSLATING.md](TRANSLATING.md) walks through the whole path, from
 creating the files to the release. A language GOG sells the game in (an official translation) needs
 no translating at all: see [Official translations](TRANSLATING.md#official-translations).

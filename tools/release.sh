@@ -8,6 +8,8 @@
 #                       language, {"version", "languages": [{"code", "name", "english", "note",
 #                       "version", "url", "sha256", "size"}]}
 #   <code>.h4p          the pack of each language built now
+#   <code>-windows.zip  the same for the Windows GOG game without ReHoMM4 (tools/windows.py), of
+#                       each language built now that has languages/<code>/WINDOWS.txt (its readme)
 #   ReHoMM4-translations-<version>.zip     the source (languages/ and tools/, no game data)
 #
 # Updating one language: `release.sh 1.1.0 <game dir> uk` builds only uk; every other language
@@ -52,6 +54,9 @@ fi
 for c in "${CODES[@]}"; do
   echo "== $c"
   cp "$(python3 -I "$ROOT/tools/pack.py" "$c" "$GAME" --from-repo)" "$OUT/$c.h4p"
+  if [[ -f "$ROOT/languages/$c/WINDOWS.txt" ]]; then
+    python3 -I "$ROOT/tools/windows.py" "$OUT/$c.h4p" "$GAME/Data" "$OUT/$c-windows.zip" "$ROOT/languages/$c/WINDOWS.txt"
+  fi
 done
 python3 -I - "$ROOT" "$OUT" "${DRY:-https://github.com/$REPO/releases/download/$TAG/}" "$VERSION" "${ALL[@]}" <<'PY'
 import hashlib, json, os, sys
@@ -84,5 +89,5 @@ git -C "$ROOT" archive --format=zip --prefix="ReHoMM4-translations-$TAG/" -o "$O
 NOTES="$(python3 -I "$ROOT/tools/check.py" 2>&1 || true)"
 gh release create "$TAG" -R "$REPO" --target "$(git -C "$ROOT" rev-parse HEAD)" --title "Translations $TAG" \
   --notes "$(printf 'The ReHoMM4 apps take these at their next start (languages.json).\n\n```\n%s\n```' "$NOTES")" \
-  "$OUT/languages.json" "$OUT"/*.h4p "$OUT/ReHoMM4-translations-$TAG.zip"
+  "$OUT/languages.json" "$OUT"/*.h4p $(ls "$OUT"/*-windows.zip 2>/dev/null) "$OUT/ReHoMM4-translations-$TAG.zip"
 echo "released $TAG: https://github.com/$REPO/releases/tag/$TAG"
