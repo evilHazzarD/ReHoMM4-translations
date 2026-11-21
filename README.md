@@ -11,18 +11,20 @@ release**. Commits change nothing for them. At every start the apps read the lat
 
 | Language | Code | Code page | State |
 |---|---|---|---|
-| Українська (Ukrainian) | `uk` | Windows-1251 | interface, campaigns (not The Gathering Storm), voice-over of the original campaigns |
+| Українська (Ukrainian) | `uk` | Windows-1251 | interface, campaigns (with The Gathering Storm), single scenarios, voice-over of the original campaigns |
 
 The Ukrainian translation was taken from [HoMM4Deadware](https://github.com/LeoDeadware/HoMM4Deadware).
 
 Want to add your language? [TRANSLATING.md](TRANSLATING.md) walks through the whole path, from
-creating the files to the release.
+creating the files to the release. A language GOG sells the game in (an official translation) needs
+no translating at all: see [Official translations](TRANSLATING.md#official-translations).
 
 ## What is here, and what is not
 
 ```
 languages/<code>/
-  language.json       name, code page, options (tools/lang.py documents every field)
+  language.json       name, code page, options (tools/lang.py documents every field);
+                      an official translation has only this file
   text/*.json         the translation: one file per campaign or interface table
   voice/clips.json    the campaign narration, line by line (for a recorded voice-over)
   GLOSSARY.md         how names and terms are translated
@@ -36,7 +38,7 @@ are not committed either.
 
 ## Releases
 
-`tools/release.sh <version> <game dir> [<code>...]` makes the GitHub release `v<version>`, for every
+`tools/release.sh <version> <game dir> [<code>...]` makes the GitHub release `<version>` (tagged as given, e.g. `0.1`), for every
 language or only those named (the others keep their packs from earlier releases). A pack is made from
 the game, so a release is built on a maintainer's Mac, from their own GOG copy. The release
 carries:
@@ -45,7 +47,7 @@ carries:
 |---|---|
 | `languages.json` | the list the apps read: each language's name, restart note, pack address, size and SHA-256 |
 | `<code>.h4p` | the language pack: a delta of the game's archives that the app applies in place |
-| `ReHoMM4-translations-v<version>.zip` | the source: `languages/` and `tools/`, no game data |
+| `ReHoMM4-translations-<version>.zip` | the source: `languages/` and `tools/`, no game data |
 
 Every push is checked by `tools/check.py` (the `check` workflow). It validates `language.json`,
 checks that the entries match the reference translation, that every text fits the code page, and

@@ -2,13 +2,13 @@
 # release.sh <version> <game dir> [<code>...]: a release of the translations, the only way they
 # reach players. It builds the pack of each language named (all of languages/ when none is) from
 # languages/<code>/text (tools/pack.py --from-repo, from your own GOG copy), then makes the GitHub
-# release v<version> with:
+# release <version> (its tag) with:
 #
 #   languages.json      the list the app reads (releases/latest/download/languages.json): every
 #                       language, {"version", "languages": [{"code", "name", "english", "note",
 #                       "version", "url", "sha256", "size"}]}
 #   <code>.h4p          the pack of each language built now
-#   ReHoMM4-translations-v<version>.zip    the source (languages/ and tools/, no game data)
+#   ReHoMM4-translations-<version>.zip     the source (languages/ and tools/, no game data)
 #
 # Updating one language: `release.sh 1.1.0 <game dir> uk` builds only uk; every other language
 # keeps its entry from the previous release's languages.json (its pack where it was uploaded
@@ -26,7 +26,7 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 VERSION="${1:?usage: release.sh <version> <game dir> [<code>...]}"; GAME="${2:?game dir}"; shift 2
-VERSION="${VERSION#v}"; TAG="v$VERSION"
+TAG="$VERSION"  # the tag is the version as given: 0.1 (as the first release)
 REPO="${H4_RELEASE_REPO:-$( (git -C "$ROOT" remote get-url origin 2>/dev/null || true) | sed -E 's#(\.git)?$##; s#^.*github\.com[:/]##')}"
 DRY="${H4_RELEASE_BASE:-}"
 if [[ -z "$DRY" ]]; then

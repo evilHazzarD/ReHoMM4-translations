@@ -5,7 +5,8 @@ a non-empty "text"), the interface tables, the voice-over (when the language has
 and the fonts (build/<code>/fonts), patching the archives of <game dir>/Data in place: the
 campaigns live in updates.h4r (expansions in storm.h4r and x2.h4r, the tutorial in heroes4.h4r),
 the fonts in heroes4.h4r, the interface text in text.h4r. Patch a fresh copy of the archives
-each time (the new data is appended). Run prepare.py first.
+each time (the new data is appended). The single scenarios (catalogs Map.*: <game dir>/maps) are
+written to build/<code>/maps. Run prepare.py first.
 
     apply.py <language code> <game dir>
 """
@@ -89,6 +90,26 @@ def main(code, game):
     if heroes4:
         h4r.patch(os.path.join(data, 'heroes4.h4r'), heroes4)
     print(f'{len(fonts)} fonts')
+    # The single scenarios: rebuilt into build/<code>/maps/<their path below the game folder>
+    # (pack.py puts them in the pack as files; the game reads them in place of its own).
+    out_maps = os.path.join(lg.work, 'maps')
+    if os.path.isdir(out_maps):
+        import shutil
+        shutil.rmtree(out_maps)
+    n = 0
+    for name, rel in sorted(L.game_maps(game).items()):
+        path = os.path.join(lg.catalog, name + '.json')
+        if not os.path.exists(path):
+            continue
+        items = json.load(open(path, encoding='utf-8'))
+        table = {it['en'].encode('cp1252'): lg.encode(it[L.FIELD]) for it in items if it.get(L.FIELD)}
+        if not table:
+            continue
+        out = os.path.join(out_maps, rel)
+        os.makedirs(os.path.dirname(out), exist_ok=True)
+        open(out, 'wb').write(ct.rebuild_map(os.path.join(game, rel), table))
+        n += 1
+    print(f'{n} single scenarios')
 
 
 if __name__ == '__main__':

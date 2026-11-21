@@ -40,9 +40,14 @@ def write(path, data):
     open(path, 'wb').write(data)
 
 
-def english(lg, archives):
-    """{key: English} of every campaign string and table cell of the game."""
+def english(lg, archives, game):
+    """{key: English} of every campaign string, single scenario string and table cell of the game."""
     found = {}
+    maps = L.game_maps(game)
+    for name, rel in maps.items():
+        if os.path.exists(os.path.join(lg.text_dir, name + '.json')):
+            for _, t in ct.map_strings(os.path.join(game, rel)):
+                found[key(t)] = t
     for path in sorted(glob.glob(os.path.join(lg.text_dir, '*.json'))):
         base = os.path.basename(path)[:-5]
         archive = next((a for p, a in L.CAMPAIGN_ARCHIVES.items() if base.startswith(p)), None)
@@ -88,7 +93,7 @@ def main(code, game, mode=''):
     data = os.path.join(game, 'Data')
     archives = {a: entries(os.path.join(data, a))
                 for a in set(L.CAMPAIGN_ARCHIVES.values()) | {'text.h4r'}}
-    found = english(lg, archives)
+    found = english(lg, archives, game)
 
     os.makedirs(lg.catalog, exist_ok=True)
     missing = 0

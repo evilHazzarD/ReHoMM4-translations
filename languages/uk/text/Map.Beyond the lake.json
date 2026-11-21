@@ -1,0 +1,20 @@
+[
+ {
+  "id": 0,
+  "where": "map name",
+  "text": "За озером",
+  "key": "dced4d9bf1d4"
+ },
+ {
+  "id": 1,
+  "where": "map description",
+  "text": "Перевірте, чи вистачить вам сил здолати тих чужинців з-за озера.",
+  "key": "07dc0e72dab1"
+ },
+ {
+  "id": 2,
+  "where": "map",
+  "text": "",
+  "key": "5069beca4ac4"
+ }
+]

@@ -10,6 +10,10 @@ writes what changed:
       u16 name length, name (in Data/), u64 original size, u64 appended size,
       u32 entry count, per entry: u32 file position, 12 bytes English, 12 bytes translated,
       then the appended bytes.
+    optionally then the translation's files outside the archives (official.py: single scenarios):
+      "H4PF", u32 count, per file: u16 path length, the path below the game folder
+      (Windows-1252, '/'), u64 size, the bytes. The app unpacks them beside the game and reads
+      them in place of the game's; older apps ignore them.
 
 The app appends them to the player's own (English) archives once; the language is
 then chosen by which header bytes are written, in place, without a second
@@ -25,6 +29,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import h4r  # noqa: E402
 
 ARCHIVES = ['heroes4.h4r', 'updates.h4r', 'text.h4r', 'storm.h4r', 'x2.h4r']
+# Their sizes in the English GOG game (3.0): a larger one has a translation in it (take_out.py).
+GOG_SIZES = {'heroes4.h4r': 608978363, 'updates.h4r': 12826516, 'text.h4r': 326876,
+             'storm.h4r': 40778721, 'x2.h4r': 70801021}
 
 
 def main(orig_dir, new_dir, out):

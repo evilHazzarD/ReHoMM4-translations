@@ -7,10 +7,10 @@
   "’": "'",
   "ʼ": "'"
  },
- "gathering_storm": false,
+ "gathering_storm": true,
  "letters": "ҐЁЄЇІіґё№єїАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюя",
  "restart_note": "Перезапустіть гру, щоб застосувати нову мову.",
  "sample": "Treasure Chest — Скриня зі скарбом: «Флакон кислоти». Ґанок, Єва, Їжак, щука, ЖЮЯ!",
- "version": "0.1",
+ "version": "0.2",
  "voice": "heroes4-mac-assets.zip (loc/voice/raw) from the ReHoMM4 releases"
 }

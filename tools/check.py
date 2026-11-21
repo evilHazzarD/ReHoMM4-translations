@@ -23,6 +23,12 @@ def check(code, ref_keys):
             errors.append(f'language.json: no "{k}"')
     if lg.unencodable(lg.name):
         errors.append('language.json: "name" does not fit the code page')
+    if lg.official:  # no catalogs: the pack is made from a localized copy (official.py)
+        if not (lg.official.get('installer') or lg.official.get('folder')):
+            errors.append('language.json: "official" has no "installer" or "folder"')
+        if os.path.isdir(lg.text_dir):
+            errors.append('an official translation has no text/ (it is taken from the game)')
+        return errors, 0, 0
     for path in sorted(glob.glob(os.path.join(lg.text_dir, '*.json'))):
         base = os.path.basename(path)
         items = json.load(open(path, encoding='utf-8'))
@@ -49,7 +55,10 @@ def main(codes):
     failed = False
     for code in codes or L.codes():
         errors, done, total = check(code, ref_keys)
-        print(f'{code}: {done}/{total} translated' + (f', {len(errors)} problems' if errors else ''))
+        what = [] if L.Language(code).official else [f'{done}/{total} translated']
+        if errors:
+            what.append(f'{len(errors)} problems')
+        print(f'{code}: ' + (', '.join(what) or 'ok'))
         for e in errors[:50]:
             print('  ' + e)
         failed |= bool(errors)

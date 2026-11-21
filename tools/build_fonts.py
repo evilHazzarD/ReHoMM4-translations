@@ -3,7 +3,7 @@
 The fonts cover codes 32..255 as Windows-1252; a translation's text is written in its own
 Windows code page (languages/<code>/language.json). For every code where that page has a
 character Windows-1252 shows differently:
-  - the same character elsewhere in Windows-1252 (Polish ó, « », „ “ ”) gets that glyph;
+  - the same character elsewhere in Windows-1252 (ó, « », „ “ ”) gets that glyph;
   - a letter that looks like a Latin one (Cyrillic А В Е К М Н О Р С Т Х І Ї Ё а е о р с у х
     і ї ё, Greek Α Β Ε Ζ Η Ι Κ Μ Ν Ο Ρ Τ Υ Χ ο) gets a copy of the game's own Latin glyph, so most
     of a line is drawn in the original face;

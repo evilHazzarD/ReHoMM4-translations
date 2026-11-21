@@ -156,3 +156,32 @@ def rebuild(path, table, out_path):
     out = out[:12] + struct.pack('<I', len(out) - 16) + out[16:]
     open(out_path, 'wb').write(out)
     return out
+
+
+# ---- single scenarios (maps/*.h4c) --------------------------------------------
+
+# A single scenario: "H4CAMPAIGN", 5 more bytes of header, then one gzip stream (the map) to the end.
+MAP_HEADER = 15
+
+
+def map_data(b):
+    assert b[:10] == b'H4CAMPAIGN' and b[MAP_HEADER:MAP_HEADER + 3] == b'\x1f\x8b\x08', 'not a single scenario'
+    d = zlib.decompressobj(31)
+    data = d.decompress(b[MAP_HEADER:])
+    assert not d.unused_data, 'data after the map'
+    return data
+
+
+def map_strings(path, codepage='cp1252'):
+    """The Pascal strings of a single scenario, in order: [(offset, text)]."""
+    return [(pos, s.decode(codepage, 'replace')) for pos, s in strings(map_data(open(path, 'rb').read()))]
+
+
+def rebuild_map(path, table):
+    """The scenario's bytes with every string in table {bytes: bytes} replaced; checks that the map
+    still reads as as many strings."""
+    b = open(path, 'rb').read()
+    data = map_data(b)
+    new = replace_strings(data, table)
+    assert len(strings(new)) == len(strings(data)), f'{path}: string layout changed'
+    return b[:MAP_HEADER] + gzip.compress(new, 9, mtime=0)

@@ -4,7 +4,7 @@ strings the game shows (by key: no game text is in the repository).
 
     new_language.py <code> <codepage> "<name in the language>" "<name in English>"
 
-    e.g. new_language.py pl cp1250 "Polski" "Polish"
+    e.g. new_language.py cs cp1250 "Čeština" "Czech"
 
 Then: tools/prepare.py <code> <game dir> puts the English in (build/<code>/catalog), you
 translate there, tools/export.py <code> writes it back. TRANSLATING.md has the whole path.

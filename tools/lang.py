@@ -12,6 +12,9 @@
       "sample": "...",                 optional: the font preview's text
       "restart_note": "Перезапустіть гру, щоб застосувати нову мову.",
       "version": "1.0"                 bumped by its maintainers, shown in releases
+      "official": {"installer": "...", "from": "..."}
+                                       optional: an official translation, taken whole from a
+                                       localized GOG copy (tools/official.py), no text/
     }
 
 Generated files (the game's English text, extracted archives, fonts, the pack) go to
@@ -33,6 +36,21 @@ CODEPAGES = ('cp1250', 'cp1251', 'cp1252', 'cp1253', 'cp1254', 'cp1257')
 # Archives that hold the campaign files, by the catalog name's prefix.
 CAMPAIGN_ARCHIVES = {'Campaign.': 'updates.h4r', 'storm_campaign.': 'storm.h4r',
                      'wow_campaign.': 'x2.h4r', 'single.': 'heroes4.h4r'}
+# The single scenarios: text/Map.<file name without .h4c>.json, for <game>/maps/**/<that>.h4c
+# (outside the archives: the pack carries them as files).
+MAP_PREFIX = 'Map.'
+
+
+def game_maps(game):
+    """{catalog name (Map.<stem>): path below the game folder ('maps/...')} of the game's maps."""
+    root = next((os.path.join(game, n) for n in os.listdir(game) if n.lower() == 'maps'), None)
+    out = {}
+    for d, _, names in os.walk(root or os.path.join(game, 'maps')):
+        for n in sorted(names):
+            if n.lower().endswith('.h4c'):
+                rel = os.path.relpath(os.path.join(d, n), game).replace(os.sep, '/')
+                assert out.setdefault(MAP_PREFIX + n[:-4], rel) == rel, f'two maps named {n}'
+    return out
 
 
 def codes():
@@ -57,6 +75,7 @@ class Language:
         codecs.lookup(self.codepage)
         self.replace = self.meta.get('replace', {})
         self.storm = bool(self.meta.get('gathering_storm', False))
+        self.official = self.meta.get('official')
         self.text_dir = os.path.join(self.dir, 'text')
         self.clips = os.path.join(self.dir, 'voice', 'clips.json')
         self.voice_raw = os.path.join(self.dir, 'voice', 'raw')
