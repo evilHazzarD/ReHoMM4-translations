@@ -59,7 +59,9 @@ carries:
 |---|---|
 | `languages.json` | the list the apps read: each language's name, restart note, pack address, size and SHA-256 |
 | `<code>.h4p` | the language pack: a delta of the game's archives that the app applies in place |
-| `ReHoMM4-translations-<version>.zip` | the source: `languages/` and `tools/`, no game data |
+| `<code>-windows.zip` | the same translation for the Windows GOG game, to unzip into the game folder |
+
+The source of a release is GitHub's own archive of its tag ("Source code").
 
 Every push is checked by `tools/check.py` (the `check` workflow). It validates `language.json`,
 checks that the entries match the reference translation, that every text fits the code page, and

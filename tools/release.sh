@@ -10,7 +10,8 @@
 #   <code>.h4p          the pack of each language built now
 #   <code>-windows.zip  the same for the Windows GOG game without ReHoMM4 (tools/windows.py), of
 #                       each language built now that has languages/<code>/WINDOWS.txt (its readme)
-#   ReHoMM4-translations-<version>.zip     the source (languages/ and tools/, no game data)
+#
+# The source is GitHub's own archive of the tag ("Source code"), so it is not uploaded.
 #
 # Updating one language: `release.sh 1.1.0 <game dir> uk` builds only uk; every other language
 # keeps its entry from the previous release's languages.json (its pack where it was uploaded
@@ -85,9 +86,8 @@ json.dump({'version': version, 'languages': langs}, open(os.path.join(out, 'lang
           ensure_ascii=False, indent=1)
 PY
 if [[ -n "$DRY" ]]; then echo "test release in $OUT (serve it at $DRY)"; exit 0; fi
-git -C "$ROOT" archive --format=zip --prefix="ReHoMM4-translations-$TAG/" -o "$OUT/ReHoMM4-translations-$TAG.zip" HEAD
 NOTES="$(python3 -I "$ROOT/tools/check.py" 2>&1 || true)"
 gh release create "$TAG" -R "$REPO" --target "$(git -C "$ROOT" rev-parse HEAD)" --title "Translations $TAG" \
   --notes "$(printf 'The ReHoMM4 apps take these at their next start (languages.json).\n\n```\n%s\n```' "$NOTES")" \
-  "$OUT/languages.json" "$OUT"/*.h4p $(ls "$OUT"/*-windows.zip 2>/dev/null) "$OUT/ReHoMM4-translations-$TAG.zip"
+  "$OUT/languages.json" "$OUT"/*.h4p $(ls "$OUT"/*-windows.zip 2>/dev/null)
 echo "released $TAG: https://github.com/$REPO/releases/tag/$TAG"

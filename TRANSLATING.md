@@ -156,9 +156,9 @@ bash tools/release.sh 2026.12 /path/to/game          # every language: the GitHu
 bash tools/release.sh 2026.12.1 /path/to/game cs     # only Czech
 ```
 
-This builds the packs from `languages/<code>/text` and uploads them with `languages.json` and a zip
-of the source. When only some languages are named, the others keep their entries from the previous
-release's `languages.json`, with their packs where they were uploaded then: players of those
+This builds the packs from `languages/<code>/text` and uploads them with `languages.json` (the
+source is GitHub's own archive of the release's tag). When only some languages are named, the
+others keep their entries from the previous release's `languages.json`, with their packs where they were uploaded then: players of those
 languages download nothing. So never delete an old release while its pack is still in use (the
 latest `languages.json` shows each pack's address). Commit and push first; the script refuses a tree with uncommitted changes. The apps see the release at their next
 start. A player who has picked a language gets its new pack (checked by size and SHA-256) the
