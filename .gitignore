@@ -1,6 +1,5 @@
 # Made from your own copy of the game: never committed.
 build/
-languages/*/voice/raw/
 languages/*/voice/entries/
 tools/glyphs
 __pycache__/

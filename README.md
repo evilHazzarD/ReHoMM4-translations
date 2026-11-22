@@ -38,14 +38,15 @@ languages/<code>/
                       an official translation has only this file
   text/*.json         the translation: one file per campaign or interface table
   voice/clips.json    the campaign narration, line by line (for a recorded voice-over)
+  voice/raw/*.mp3     the recordings, one per clip
   GLOSSARY.md         how names and terms are translated
 tools/                building, checking and releasing (Python 3; the fonts need macOS)
 ```
 
 The repository carries **no game text**. Every entry names its English original by a key, the first
 12 hex digits of the SHA-1 of the English text. `tools/prepare.py` puts the English back from your
-own copy of the game, in `build/` (ignored by git). Voice recordings (`languages/<code>/voice/raw/`)
-are not committed either.
+own copy of the game, in `build/` (ignored by git). The recorded voice-over
+(`languages/<code>/voice/raw/*.mp3`) is the translators' own and is committed.
 
 ## Releases
 

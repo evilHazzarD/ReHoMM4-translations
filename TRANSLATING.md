@@ -141,9 +141,9 @@ Run `export.py` whenever you want to commit. Open a pull request, or push to you
 
 The original campaigns' narration can be re-recorded. `voice/clips.json` lists each clip (its
 `clip` name, campaign and map) with the text it reads. Put the recordings at
-`languages/cs/voice/raw/<clip>.mp3`. They are not committed; share them as a release asset or a
-zip. `pack.py` converts them with ffmpeg to the game's format (44.1 kHz stereo MP3). Clips without
-a recording keep the English voice.
+`languages/cs/voice/raw/<clip>.mp3` and commit them with the translation (only your own
+recordings, never the game's English audio). `pack.py` converts them with ffmpeg to the game's
+format (44.1 kHz stereo MP3). Clips without a recording keep the English voice.
 
 ## 8. Release
 
