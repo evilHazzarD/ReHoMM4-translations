@@ -250,6 +250,7 @@
 ## Winds of War (додано)
 | EN | UK |
 |---|---|
+| Winds of War (у меню кампаній) / Rivals | «Вітри війни» / Суперники |
 | Channon / Rylos / Arbor'al / Qassar / Korresan / Orilios | Ченнон / Рилос / Арбор'ал / Кассар / Корресан / Оріліос |
 | Mongo / Otook / King Bolingar | Монґо / Отук / король Болінґар |
 | Mysterio the Magnificent / Lord Erin / Suldussar | Містеріо Неперевершений / лорд Ерін / Сульдуссар |
@@ -262,6 +263,7 @@
 ## Gathering Storm
 | EN | UK |
 |---|---|
+| The Gathering Storm (назва кампанії й меню кампаній) | «Наближення бурі» |
 | Hexis / Devonshire / Lodwar / Rinaldi / Gilmore Crossing | Гексіс / Девоншир / Лодвар / Рінальді / Ґілморська переправа |
 | Bohb / Kozuss / Dogwoggle / Agraynel / Alita Eventide | Боб / Козусс / Доґвоґл / Аґрейнел / Аліта Евентайд |
 | Nevar / Violet / Yargtooth / Eradawn / Isle of Pyre | Невар / Віолет / Ярґтус / Ерадаун / острів Пайр |

@@ -6,7 +6,8 @@ reads build/<code>/extract/game_maps.X.h4d, writes build/<code>/catalog/X.json.
 
 Keeps prose and titles (strings with a space), drops object-type keys
 such as "mountains.Grass rough.17" (a dot followed by a non-space with no
-sentence break). The campaign name and description in the header are
+sentence break). The campaign name and description in the header, and the
+first string of each map (its name, which may be one word: "Rivals"), are
 always kept. Existing translations in the catalog are preserved."""
 import json
 import os
@@ -30,7 +31,7 @@ def build(src, out):
     old = {}
     if os.path.exists(out):
         old = {e['en']: e.get(L.FIELD, '') for e in json.load(open(out, encoding='utf-8'))}
-    items, seen = [], set()
+    items, seen, last = [], set(), None
     for k, r in enumerate(ct.extract(src)):
         t = r['en']
         part = r['part']
@@ -39,7 +40,8 @@ def build(src, out):
             ok = len(t) > 1
         else:
             where = 'map %d' % (int(part[3:]) + 1)
-            ok = visible(t)
+            ok = (part != last and t.strip()) or visible(t)
+        last = part
         if ok and t not in seen:
             seen.add(t)
             items.append({'id': len(items), 'where': where, 'en': t, L.FIELD: old.get(t, '')})
