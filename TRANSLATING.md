@@ -69,6 +69,7 @@ game's own glyphs; the rest are rendered from a macOS system font, sized to matc
 | Files | What they are |
 |---|---|
 | `UI.Interface`, `UI.Text` | menus, buttons, messages |
+| `UI.Intro` | the subtitles of the intro movies (Heroes IV, Winds of War, The Gathering Storm) |
 | `Names.*`, `Help.*`, `Flavor.*` | creatures, spells, artifacts, skills, buildings, abilities |
 | `Objects`, `Bio.heroes` | adventure map objects, hero biographies |
 | `Campaign.*` | the six original campaigns |

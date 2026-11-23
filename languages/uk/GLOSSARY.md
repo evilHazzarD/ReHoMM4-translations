@@ -247,6 +247,11 @@
 | Mer-Queen / Sea Monster Hatchery | Королева русалок / Розплідник морських чудовиськ |
 | Pirate Queen / Queen of the Gold Sea | Королева піратів / Королева Золотого моря |
 
+## Вступний ролик (UI.Intro)
+| EN | UK |
+|---|---|
+| Sword of Frost / Armageddon's Blade | Меч Морозу / Клинок Армагеддону |
+
 ## Winds of War (додано)
 | EN | UK |
 |---|---|

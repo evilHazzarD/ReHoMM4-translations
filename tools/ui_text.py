@@ -25,6 +25,7 @@ import lang as L  # noqa: E402
 TABLES = {
     'table.Interface.h4d': [('UI.Interface', (2, 3), (0, 1))],
     'strings.Text.h4d': [('UI.Text', (1,), (0,))],
+    'strings.intro voice over text.h4d': [('UI.Intro', (1,), (0,))],  # the intro movies' subtitles
     'table.creatures.h4d': [('Names.creatures', (1, 2, 3, 4), (0,)),
                             ('Help.creatures', (26, 27), (0,))],
     'table.Spells.h4d': [('Names.spells', (1, 2), (0,)),
