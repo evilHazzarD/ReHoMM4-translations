@@ -160,5 +160,17 @@
   "where": "map",
   "text": "Тулок Страшний",
   "key": "71cf88b64c06"
+ },
+ {
+  "id": 27,
+  "where": "names",
+  "text": "Екенс",
+  "key": "c80526591c8a"
+ },
+ {
+  "id": 28,
+  "where": "names",
+  "text": "Севераста",
+  "key": "4ae499bf63aa"
  }
 ]

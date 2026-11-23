@@ -1060,5 +1060,35 @@
   "where": "map 4",
   "text": "",
   "key": "3f0d7d279c0a"
+ },
+ {
+  "id": 177,
+  "where": "names",
+  "text": "Алленвейл",
+  "key": "abe02889b2ff"
+ },
+ {
+  "id": 178,
+  "where": "names",
+  "text": "Унґадін",
+  "key": "11ef9f674ceb"
+ },
+ {
+  "id": 179,
+  "where": "names",
+  "text": "Велебон",
+  "key": "3d82a1f49d59"
+ },
+ {
+  "id": 180,
+  "where": "names",
+  "text": "Ґарішар",
+  "key": "136763b9d017"
+ },
+ {
+  "id": 181,
+  "where": "names",
+  "text": "Сомберн",
+  "key": "ce0be9c7a2a0"
  }
 ]

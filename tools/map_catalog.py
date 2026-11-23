@@ -1,8 +1,9 @@
 """Builds the catalogs of the single scenarios (the game's maps/*.h4c): one per map,
 build/<code>/catalog/Map.<file name>.json, with the strings the player sees: the map's name, its
 description and the text of its events, signs and the like (strings with a space, as for the
-campaigns: campaign_catalog.visible). A string already translated, in this map's catalog or in any
-other catalog of the language (the campaigns, the interface), is filled in from there.
+campaigns: campaign_catalog.visible), and then the one-word names of its towns and heroes
+(campaign_catalog.shown_names, as "names"). A string already translated, in this map's catalog or
+in any other catalog of the language (the campaigns, the interface), is filled in from there.
 
     map_catalog.py <language code> <game dir> [<localized maps dir> <its code page>]
 
@@ -59,6 +60,10 @@ def main(code, game, loc_dir=None, loc_codepage='cp1252'):
                 first[t] = i
                 items.append({'id': len(items), 'where': where, 'en': t,
                               L.FIELD: old.get(t) or known.get(t, '')})
+        for t in cc.shown_names(ct.map_data(open(os.path.join(game, rel), 'rb').read()), seen):
+            seen.add(t)
+            first[t] = strings.index(t)
+            items.append({'id': len(items), 'where': 'names', 'en': t, L.FIELD: old.get(t) or known.get(t, '')})
         json.dump(items, open(out, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
         total += len(items)
         done += sum(bool(it[L.FIELD]) for it in items)

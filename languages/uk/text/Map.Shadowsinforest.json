@@ -136,5 +136,89 @@
   "where": "map",
   "text": "Хоч вас і переможено, вам вдалося відвернути увагу варти. Ніхто не помітив, як Яаґуп завершив свою довгу роботу чайною ложечкою і частина стіни обвалилася...",
   "key": "504086808f76"
+ },
+ {
+  "id": 23,
+  "where": "names",
+  "text": "Орікс",
+  "key": "ec850195cbf2"
+ },
+ {
+  "id": 24,
+  "where": "names",
+  "text": "Орокс",
+  "key": "d7f05fa83bfb"
+ },
+ {
+  "id": 25,
+  "where": "names",
+  "text": "Пурокс",
+  "key": "3e5aed0e67c3"
+ },
+ {
+  "id": 26,
+  "where": "names",
+  "text": "Блакс",
+  "key": "20ae4b9c09dc"
+ },
+ {
+  "id": 27,
+  "where": "names",
+  "text": "Пурікс",
+  "key": "d0dbda6a8e1e"
+ },
+ {
+  "id": 28,
+  "where": "names",
+  "text": "Оракс",
+  "key": "a6c125b8d3f5"
+ },
+ {
+  "id": 29,
+  "where": "names",
+  "text": "Тілакс",
+  "key": "14dc735f5d54"
+ },
+ {
+  "id": 30,
+  "where": "names",
+  "text": "Ґренікс",
+  "key": "7acbf709c72b"
+ },
+ {
+  "id": 31,
+  "where": "names",
+  "text": "Тілокс",
+  "key": "b57e1fdb6146"
+ },
+ {
+  "id": 32,
+  "where": "names",
+  "text": "Блікс",
+  "key": "a75d58277632"
+ },
+ {
+  "id": 33,
+  "where": "names",
+  "text": "Блокс",
+  "key": "736fc3679133"
+ },
+ {
+  "id": 34,
+  "where": "names",
+  "text": "Пуракс",
+  "key": "4edeeee8b12d"
+ },
+ {
+  "id": 35,
+  "where": "names",
+  "text": "Тілікс",
+  "key": "470b32b259a4"
+ },
+ {
+  "id": 36,
+  "where": "names",
+  "text": "Інґа",
+  "key": "e21ecc03264a"
  }
 ]

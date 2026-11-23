@@ -544,5 +544,41 @@
   "where": "map 3",
   "text": "Чорний лицар Морданіс",
   "key": "ea3371bb64e9"
+ },
+ {
+  "id": 91,
+  "where": "names",
+  "text": "Девенпорт",
+  "key": "75bc21a13c60"
+ },
+ {
+  "id": 92,
+  "where": "names",
+  "text": "Ларінат",
+  "key": "a63202428953"
+ },
+ {
+  "id": 93,
+  "where": "names",
+  "text": "Аґрейнел",
+  "key": "d4255cf3789f"
+ },
+ {
+  "id": 94,
+  "where": "names",
+  "text": "Гнилоліс",
+  "key": "08c19d94b143"
+ },
+ {
+  "id": 95,
+  "where": "names",
+  "text": "Болотошепт",
+  "key": "858952dffa66"
+ },
+ {
+  "id": 96,
+  "where": "names",
+  "text": "Плющ",
+  "key": "f3742ddc65dd"
  }
 ]

@@ -478,5 +478,35 @@
   "where": "map 3",
   "text": "",
   "key": "9fa26ba038c6"
+ },
+ {
+  "id": 80,
+  "where": "names",
+  "text": "Боб",
+  "key": "28e1b47f4bd2"
+ },
+ {
+  "id": 81,
+  "where": "names",
+  "text": "Доґвоґл",
+  "key": "cce7a65fa43a"
+ },
+ {
+  "id": 82,
+  "where": "names",
+  "text": "Козусс",
+  "key": "2ab50d0d3baf"
+ },
+ {
+  "id": 83,
+  "where": "names",
+  "text": "Аґрейнел",
+  "key": "d4255cf3789f"
+ },
+ {
+  "id": 84,
+  "where": "names",
+  "text": "Гексіс",
+  "key": "9472f5bca4e9"
  }
 ]

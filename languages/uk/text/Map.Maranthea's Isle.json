@@ -22,5 +22,17 @@
   "where": "map",
   "text": "",
   "key": "01a45bda1222"
+ },
+ {
+  "id": 4,
+  "where": "names",
+  "text": "Ед",
+  "key": "65954b8be772"
+ },
+ {
+  "id": 5,
+  "where": "names",
+  "text": "Боб",
+  "key": "da6645f6e22b"
  }
 ]

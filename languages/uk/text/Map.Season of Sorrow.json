@@ -70,5 +70,41 @@
   "where": "map",
   "text": "",
   "key": "2a701fad83c2"
+ },
+ {
+  "id": 12,
+  "where": "names",
+  "text": "Лінчестер",
+  "key": "611db51b7626"
+ },
+ {
+  "id": 13,
+  "where": "names",
+  "text": "Дайямер",
+  "key": "86d7ad786b4c"
+ },
+ {
+  "id": 14,
+  "where": "names",
+  "text": "Миротворець",
+  "key": "02c67952685b"
+ },
+ {
+  "id": 15,
+  "where": "names",
+  "text": "Віленцій",
+  "key": "5f5e3909bdc4"
+ },
+ {
+  "id": 16,
+  "where": "names",
+  "text": "Арренвельдт",
+  "key": "2a5df6e443dc"
+ },
+ {
+  "id": 17,
+  "where": "names",
+  "text": "Астерлорн",
+  "key": "91bc19a5f4ee"
  }
 ]

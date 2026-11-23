@@ -208,5 +208,17 @@
   "where": "map",
   "text": "Схоже, вдома нікого немає.\n",
   "key": "0f18011fb897"
+ },
+ {
+  "id": 35,
+  "where": "names",
+  "text": "Ґорн",
+  "key": "2f3c435dba7d"
+ },
+ {
+  "id": 36,
+  "where": "names",
+  "text": "Враал",
+  "key": "a155280cd1dc"
  }
 ]

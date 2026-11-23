@@ -334,5 +334,53 @@
   "where": "map 5",
   "text": "Самопроголошений Володар магії Смерті.",
   "key": "817a46eae061"
+ },
+ {
+  "id": 56,
+  "where": "names",
+  "text": "Віолет",
+  "key": "ddcd2f2e783a"
+ },
+ {
+  "id": 57,
+  "where": "names",
+  "text": "Боб",
+  "key": "28e1b47f4bd2"
+ },
+ {
+  "id": 58,
+  "where": "names",
+  "text": "Мохова Гілка",
+  "key": "c3481d50e97c"
+ },
+ {
+  "id": 59,
+  "where": "names",
+  "text": "Дубова Долина",
+  "key": "ad8313ee3821"
+ },
+ {
+  "id": 60,
+  "where": "names",
+  "text": "Урґол",
+  "key": "99225d2add76"
+ },
+ {
+  "id": 61,
+  "where": "names",
+  "text": "Сильвантон",
+  "key": "c6f680373410"
+ },
+ {
+  "id": 62,
+  "where": "names",
+  "text": "Ґурт",
+  "key": "1fe792e004ca"
+ },
+ {
+  "id": 63,
+  "where": "names",
+  "text": "Ореха",
+  "key": "55fc2869b655"
  }
 ]

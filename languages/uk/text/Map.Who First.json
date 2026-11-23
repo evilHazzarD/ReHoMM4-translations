@@ -184,5 +184,41 @@
   "where": "map",
   "text": "Сплячі дракони.",
   "key": "3552115b32dd"
+ },
+ {
+  "id": 31,
+  "where": "names",
+  "text": "Червоний",
+  "key": "cc9db3a79557"
+ },
+ {
+  "id": 32,
+  "where": "names",
+  "text": "Синій",
+  "key": "7d44bc449c2a"
+ },
+ {
+  "id": 33,
+  "where": "names",
+  "text": "Зелений",
+  "key": "933bf21afdd5"
+ },
+ {
+  "id": 34,
+  "where": "names",
+  "text": "Пурпуровий",
+  "key": "32576f4fedc0"
+ },
+ {
+  "id": 35,
+  "where": "names",
+  "text": "Бірюзовий",
+  "key": "df0ad373b7ff"
+ },
+ {
+  "id": 36,
+  "where": "names",
+  "text": "Помаранчевий",
+  "key": "09fb6aaba794"
  }
 ]
