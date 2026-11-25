@@ -1,0 +1,65 @@
+name: pages
+
+# The latest release's languages.json and packs on this repository's GitHub Pages site
+# (<owner>.github.io/ReHoMM4-translations/): the ReHoMM4 browser version on <owner>.github.io/ReHoMM4/
+# reads them there as its own site's files. GitHub's release downloads do not allow other sites'
+# pages to read them (no CORS headers), so it cannot take them from the release itself.
+# The same files as the release, nothing more; languages.json is kept as released (its addresses
+# stay the release's: the page maps them here by file name).
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: translations-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: The latest release's list and packs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir site
+          gh release download -R "$GITHUB_REPOSITORY" -D site -p languages.json -p '*.h4p'
+          python3 -I - site <<'PY'
+          import hashlib, json, os, sys
+          d = sys.argv[1]
+          listed = set()
+          for l in json.load(open(os.path.join(d, 'languages.json')))['languages']:
+              name = l['url'].rsplit('/', 1)[1]
+              listed.add(name)
+              h = hashlib.sha256()
+              with open(os.path.join(d, name), 'rb') as f:
+                  for b in iter(lambda: f.read(1 << 20), b''): h.update(b)
+              if h.hexdigest() != l['sha256']:
+                  sys.exit(f'{name}: not the sha256 languages.json gives')
+              print(f"{l['code']}: {name}")
+          for name in os.listdir(d):
+              if name != 'languages.json' and name not in listed:
+                  os.remove(os.path.join(d, name))
+          PY
+      - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b  # v4.0.0
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e  # v4.0.5
