@@ -91,3 +91,8 @@ gh release create "$TAG" -R "$REPO" --target "$(git -C "$ROOT" rev-parse HEAD)" 
   --notes "$(printf 'The ReHoMM4 apps take these at their next start (languages.json).\n\n```\n%s\n```' "$NOTES")" \
   "$OUT/languages.json" "$OUT"/*.h4p $(ls "$OUT"/*-windows.zip 2>/dev/null)
 echo "released $TAG: https://github.com/$REPO/releases/tag/$TAG"
+# The translations' GitHub Pages site (the ReHoMM4 browser version reads the packs there): the
+# pages workflow publishes the latest release's files. Only main may publish to Pages, so it is run
+# on main here rather than by the release (whose tag is on develop).
+gh workflow run pages -R "$REPO" --ref main && echo "pages: started (https://github.com/$REPO/actions/workflows/pages.yml)" \
+  || echo "warning: the pages workflow was not started: run it on main (gh workflow run pages -R $REPO --ref main)"
